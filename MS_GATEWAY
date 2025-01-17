@@ -12,3 +12,9 @@ spring:
             - Path=/cours/**
           filters:
             - RewritePath=/cours/(?<path>.*), /$\{path}
+        - id: Gestion_Formateur
+          uri: lb://Gestion_Formateur
+          predicates:
+            - Path=/formateur/**
+          filters:
+            - RewritePath=/formateur/(?<path>.*), /$\{path}
